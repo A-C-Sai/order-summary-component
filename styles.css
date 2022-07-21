@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:root {
+  --mobile-breakpoint: 375px;
+  --desktop-breakpoint: 1440px;
+  --fw--500: 500;
+  --fw--700: 700;
+  --fw--900: 900;
+  --ff-main: "Red Hat Display", sans-serif;
+  --fs-p: 1rem;
+  --clr-blue-900: hsl(223, 47%, 23%);
+  --clr-blue-400: hsl(245, 75%, 52%);
+  --clr-blue-300: hsl(224, 23%, 55%);
+  --clr-blue-200: hsl(225, 100%, 94%);
+  --clr-blue-100: hsl(225, 100%, 98%);
+}
+
+body,
+main {
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: var(--fs-p);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Utility Classes */
+
+.flex {
+  display: flex;
+}
+.flex-d-c {
+  flex-direction: column;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+/* ########################## */
