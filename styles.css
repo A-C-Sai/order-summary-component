@@ -7,15 +7,13 @@
 }
 
 :root {
-  --mobile-breakpoint: 375px;
-  --desktop-breakpoint: 1440px;
   --fw--500: 500;
   --fw--700: 700;
   --fw--900: 900;
   --ff-main: "Red Hat Display", sans-serif;
   --fs-p: 1rem;
   --clr-blue-900: hsl(223, 47%, 23%);
-  --clr-blue-400: hsl(245, 75%, 52%);
+  --clr-blue-400: rgb(56, 41, 224);
   --clr-blue-300: hsl(224, 23%, 55%);
   --clr-blue-200: hsl(225, 100%, 94%);
   --clr-blue-100: hsl(225, 100%, 98%);
@@ -29,6 +27,7 @@ main {
 body {
   font-family: var(--ff-main);
   font-size: var(--fs-p);
+  font-weight: var(--fw--500);
   line-height: 1.5;
 }
 
@@ -58,4 +57,149 @@ img {
   align-items: center;
 }
 
+.flex-g-1 {
+  flex-grow: 1;
+}
+
 /* ########################## */
+
+.main {
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--clr-blue-200);
+}
+
+.card {
+  width: 87.5%;
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.content {
+  padding: 2em 1.6em;
+}
+
+.heading {
+  color: var(--clr-blue-900);
+  font-size: 1.35rem;
+  font-weight: var(--fw--700);
+  margin-bottom: 0.7em;
+}
+
+.text-content {
+  margin-bottom: 1.6em;
+}
+
+.text {
+  color: var(--clr-blue-300);
+  font-weight: var(--fw--500);
+  margin: 0 auto;
+  max-width: 293px;
+}
+
+.plan {
+  background-color: var(--clr-blue-100);
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+}
+
+.music-icon {
+  margin-right: 1.2em;
+}
+
+.plan-details {
+  text-align: left;
+}
+
+.plan-type {
+  color: var(--clr-blue-900);
+  font-weight: var(--fw--700);
+}
+
+.plan-price {
+  color: var(--clr-blue-300);
+  font-weight: var(--fw--500);
+}
+
+.btn {
+  display: block;
+}
+
+.btn-change-plan {
+  color: var(--clr-blue-400);
+  text-underline-offset: 0.8px;
+  text-decoration-thickness: 1px;
+  font-size: 0.9rem;
+  font-weight: var(--fw--700);
+}
+
+.btn-change-plan:hover,
+.btn-change-plan:focus {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.btn-checkout {
+  text-decoration: none;
+  background-color: var(--clr-blue-400);
+  color: #fff;
+  font-weight: var(--fw--900);
+  padding-top: 0.9em;
+  padding-bottom: 0.9em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 25px 20px rgba(56, 41, 224, 0.15);
+}
+
+.btn-checkout:hover,
+.btn-checkout:focus {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.btn-cancel-order {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-blue-300);
+  font-weight: var(--fw--700);
+}
+
+.btn-cancel-order:hover,
+.btn-cancel-order:focus {
+  cursor: pointer;
+  color: var(--clr-blue-900);
+}
+
+@media screen and (min-width: 445px) {
+  .main {
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+  }
+
+  .content {
+    padding: 3em;
+  }
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .plan {
+    margin-bottom: 2.2em;
+    padding: 1.5em 1.7em;
+  }
+
+  .btn-checkout {
+    margin-bottom: 2.1em;
+  }
+}
